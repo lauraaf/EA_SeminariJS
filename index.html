@@ -3,10 +3,92 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <script defer src="index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
+<style>
+  .custom-jumbotron {
+  background-color: rgba(164, 235, 252, 0.878);
+  color: rgb(0, 0, 0); /* Adjust text color for contrast */
+  }
+
+  .custom-jumbotron2 {
+  background-color: rgba(199, 240, 250, 0.644);
+  color: rgb(0, 0, 0); /* Adjust text color for contrast */
+  }
+</style>
+
 <body>
-    <h1>Primer Seminari JavaScript </h1>
+  <div class="jumbotron custom-jumbotron">
+    <h1 style="text-align: center;">Primer Seminari JavaScript </h1>     
+    <p style="text-align: center;">Aquest es el primer seminari de EA, sobre JavaScript</p>
+  </div>
+    <br>
+    <!-- Tabla donde se mostrarán los datos de un usuario -->
+    <div class="jumbotron custom-jumbotron2">
+      <h2 style="text-align: center;">Dades del usuari</h2>
+    </div>
+    
+    <table class="table table-hover" id ="userTable" >
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          
+        </tr>
+      </tbody>
+  </table>
+  <br>
+  <!-- Tabla donde se mostrarán los posts de un usuario -->
+  <div class="jumbotron custom-jumbotron2">
+    <h2 style="text-align: center;">Posts del usuari</h2>
+  </div>
+  
+  <table class="table table-hover text-align: center;" id="postsTable">
+    <thead>
+      <tr>
+        <th>PostId</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- Introduim les dades obtenides del json -->
+      </tr>
+    </tbody>
+</table>
+<br>
+<!-- Tabla donde se mostrarán los datos manipulados -->
+<div class="jumbotron custom-jumbotron2">
+  <h2 style="text-align: center;">High-Order functions</h2>
+</div>
+
+<table class="table table-hover text-align: center;" id="dataTable">
+  <thead>
+    <tr>
+      <th>PostId</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     
+    </tr>
+  </tbody>
+</table>
 
 </body>
 </html>

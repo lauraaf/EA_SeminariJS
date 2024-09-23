@@ -36,7 +36,7 @@ fetch('https://jsonplaceholder.typicode.com/posts?userId=' + userId)
       .map(post => {
         return { ...post, id: post.id * 2 };
         })
-      // Filtrar los posts con IDs mayores a 5
+      // Filtrar los posts con IDs mayores a 30
       .filter(post => post.id > 30)
       // Llamar a la función que crea la tabla
         printTable3(combined);
@@ -46,13 +46,13 @@ fetch('https://jsonplaceholder.typicode.com/posts?userId=' + userId)
 
 
 // Funcions per printar les dades obtingudes en taules en la pagina de navegador
-// Taula 1: Dades usuari
+// Tabla 1: Dades usuari
 function printTable(user){
   const tableBody = document.querySelector('#userTable tbody');
            
   const row = document.createElement('tr');
 
-  // Crear y agregar las celdas (td)
+  // Crear i agregar les cel·les (td)
   const idCell = document.createElement('td');
   idCell.textContent = user.id;
   row.appendChild(idCell);
@@ -77,7 +77,7 @@ function printTable(user){
   websiteCell.textContent = user.website;
   row.appendChild(websiteCell);
 
-  // Agregar la fila a la tabla
+  // Agregar la fila a la taula
   tableBody.appendChild(row);
 }
 //Taula 2: Dades sobre els Post del usuari
@@ -87,7 +87,7 @@ function printTable2(posts){
   posts.forEach(post => {
       const row = document.createElement('tr');
 
-      // Crear y agregar las celdas (td)
+      // Crear i agregar las cel·les (td)
       const idCell = document.createElement('td');
       idCell.textContent = post.id;
       row.appendChild(idCell);
@@ -100,7 +100,7 @@ function printTable2(posts){
       bodyCell.textContent = post.body;
       row.appendChild(bodyCell);
 
-      // Agregar la fila a la tabla
+      // Agregar la fila a la taula
       tableBody.appendChild(row);  
   })
 }
@@ -112,7 +112,7 @@ function printTable3(posts) {
       posts.forEach(post => {
         const row = document.createElement('tr');
 
-        // Crear y agregar las celdas (td)
+        // Crear i agregar las cel·les (td)
         const idCell = document.createElement('td');
         idCell.textContent = post.id;
         row.appendChild(idCell);
@@ -125,7 +125,7 @@ function printTable3(posts) {
         bodyCell.textContent = post.body;
         row.appendChild(bodyCell);
 
-        // Agregar la fila a la tabla
+        // Agregar la fila a la taula
         tableBody.appendChild(row);
     });
   }

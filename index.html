@@ -8,54 +8,99 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <style>
   .custom-jumbotron {
   background-color: rgba(164, 235, 252, 0.878);
-  color: rgb(0, 0, 0); /* Adjust text color for contrast */
+  color: rgb(0, 0, 0);
   }
 
   .custom-jumbotron2 {
+  max-width: 400px; 
+  margin: 50px auto; /* Centering the jumbotron */
+  padding: 2rem;
   background-color: rgba(199, 240, 250, 0.644);
-  color: rgb(0, 0, 0); /* Adjust text color for contrast */
+  color: rgb(0, 0, 0); 
+  }
+  .custom-table-container {
+    max-width: 1100px; 
+    margin: 50px auto; /* Centering the table */
+    padding: 1rem;
+  }
+  .custom-table th, .custom-table td {
+    padding: 12px;
+    text-align: center;
+    border: none;
+  }
+  .custom-table th {
+    background-color: #f2f2f2; 
+  }
+
+  .custom-form{
+    max-width: 300px;
+    margin: 50px;
   }
 </style>
-
 <body>
   <div class="jumbotron custom-jumbotron">
-    <h1 style="text-align: center;">Primer Seminari JavaScript </h1>     
+    <h1 style="text-align: center;">Primer Seminari</h1>     
     <p style="text-align: center;">Aquest es el primer seminari de EA, sobre JavaScript</p>
   </div>
-    <br>
+
+    <!-- Pedimos el id del usuario del cual obtendremos los datos -->
+    <div class="form-group custom-form">
+      <label for="user">User:</label>
+      <input type="text" class="form-control custom form" id="userId" placeholder="Enter user id" name="userId">
+      <button onclick="getUserId()">Send</button>
+    </div>
     <!-- Tabla donde se mostrarán los datos de un usuario -->
     <div class="jumbotron custom-jumbotron2">
-      <h2 style="text-align: center;">Dades del usuari</h2>
+      <h3 style="text-align: center;">Dades del usuari</h3>
     </div>
-    
-    <table class="table table-hover" id ="userTable" >
+    <div class="custom-table-container">
+      <table class="table table-hover text-align: center;" id ="userTable" >
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            
+          </tr>
+        </tbody>
+    </table>
+    </div>
+  <!-- Tabla donde se mostrarán los posts de un usuario -->
+  <div class="jumbotron custom-jumbotron2">
+    <h3 style="text-align: center;">Posts del usuari</h3>
+  </div>
+  <div class="custom-table-container">
+    <table class="table table-hover text-align: center;" id="postsTable">
       <thead>
         <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Username</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Website</th>
+          <th>PostId</th>
+          <th>Title</th>
+          <th>Body</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          
+          <!-- Introduim les dades obtenides del json -->
         </tr>
       </tbody>
   </table>
-  <br>
-  <!-- Tabla donde se mostrarán los posts de un usuario -->
-  <div class="jumbotron custom-jumbotron2">
-    <h2 style="text-align: center;">Posts del usuari</h2>
   </div>
-  
-  <table class="table table-hover text-align: center;" id="postsTable">
+<!-- Tabla donde se mostrarán los datos manipulados -->
+<div class="jumbotron custom-jumbotron2">
+  <h3 style="text-align: center;">High-Order functions</h3>
+</div>
+<div class="custom-table-container">
+  <table class="table table-hover text-align: center;" id="dataTable">
     <thead>
       <tr>
         <th>PostId</th>
@@ -65,30 +110,10 @@
     </thead>
     <tbody>
       <tr>
-        <!-- Introduim les dades obtenides del json -->
+       
       </tr>
     </tbody>
-</table>
-<br>
-<!-- Tabla donde se mostrarán los datos manipulados -->
-<div class="jumbotron custom-jumbotron2">
-  <h2 style="text-align: center;">High-Order functions</h2>
+  </table>
 </div>
-
-<table class="table table-hover text-align: center;" id="dataTable">
-  <thead>
-    <tr>
-      <th>PostId</th>
-      <th>Title</th>
-      <th>Body</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-     
-    </tr>
-  </tbody>
-</table>
-
 </body>
 </html>
